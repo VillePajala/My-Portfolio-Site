@@ -1,0 +1,82 @@
+
+body {
+  max-width: 960px;
+  margin: auto;
+}
+
+#start {
+  margin: auto;
+  margin-top: 300px;
+  width: 100px;
+  text-align: center;
+  padding: 3px;
+  color: silver;
+  animation: button_out 1s;
+  transition: all 1s ease;
+}
+
+#start:hover {
+  animation: button_in 1s;
+  box-shadow: 0 30px 100px darkgray;
+  color: white;
+  background: silver;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+h3{
+  font-size: 20px;
+}
+
+
+/*
+
+@keyframes button_in {
+  0% {box-shadow: 0 0 0 white;}
+  100% {box-shadow: 0 30px 100px darkgray;}
+  0% {color: silver;}
+  100% {color: white;}
+  0% {background: white;}
+  100% {background: silver;}
+}
+
+@keyframes button_out {
+  0% {box-shadow: 0 30px 100px darkgray;}
+  100% {box-shadow: 0 0 0 white;}
+  0% {color: white;}
+  100% {color: silver;}
+  0% {background: silver;}
+  100% {background: white;}
+}
+*/
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 576px) {
+  #start {
+    width: 50px;
+  }
+  h3 {
+    font-size: 10px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
