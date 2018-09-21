@@ -32,8 +32,17 @@ body {
 
 }
 
-input {
-  
+.form-control {
+  border-radius: 0px;
+  border-color: silver;
+  text-align: center;
+}
+
+
+.form-control:focus {
+  box-shadow: 0 2px 10px silver inset;
+  border-color: silver;
+  text-align: center;
 }
 
 /*
