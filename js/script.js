@@ -18,7 +18,7 @@ var name = "";
     function nextBox() {
       var box = $("<div class='container' id='next_button'>");
       var txt1 = $("<label for='usr'>Name:</label>");
-      var input = $("<input type='text' class='form-control' id='usr'>");
+      var input = $("<input type='text' class='form-control' id='usr' autofocus>");
       $("body").append(box).fadeIn("slow");
       $("#next_button").append(txt1).fadeIn("slow");
       $("#next_button").append(input).fadeIn("slow");
