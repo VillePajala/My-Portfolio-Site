@@ -4,17 +4,35 @@ body {
   margin: auto;
 }
 
-#start {
+#start_button {
+  font-family: fantasy;
   margin: auto;
   margin-top: 300px;
   width: 100px;
   text-align: center;
   padding: 3px;
   color: silver;
-  animation: button_out 1s;
-  transition: all 1s ease;
+  animation: button_in 2s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+
 }
 
+#next_button {
+  font-family: fantasy;
+  margin: auto;
+  margin-top: 300px;
+  width: 100px;
+  text-align: center;
+  padding: 3px;
+  color: silver;
+  animation: button_in 2s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+
+}
+
+/*
 #start:hover {
   animation: button_in 1s;
   box-shadow: 0 30px 100px gray;
@@ -23,32 +41,34 @@ body {
   cursor: pointer;
   transition: all 1s ease;
 }
+*/
 
 h3{
   font-size: 20px;
 }
 
 
-/*
+
 
 @keyframes button_in {
   0% {box-shadow: 0 0 0 white;}
   100% {box-shadow: 0 30px 100px darkgray;}
-  0% {color: silver;}
+  0% {color: white;}
   100% {color: white;}
   0% {background: white;}
   100% {background: silver;}
 }
 
+
 @keyframes button_out {
   0% {box-shadow: 0 30px 100px darkgray;}
   100% {box-shadow: 0 0 0 white;}
   0% {color: white;}
-  100% {color: silver;}
+  100% {color: white;}
   0% {background: silver;}
   100% {background: white;}
 }
-*/
+
 
 
 /* Extra small devices (phones, 600px and down) */
