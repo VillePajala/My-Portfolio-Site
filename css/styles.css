@@ -38,6 +38,20 @@ body {
   text-align: center;
 }
 
+#greetings {
+  font-family: fantasy;
+  margin: auto;
+  margin-top: 200px;
+  width: 100px;
+  text-align: center;
+  padding: 3px;
+  color: silver;
+  animation: button_in 2s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+
+}
+
 
 .form-control:focus {
   box-shadow: 0 2px 10px silver inset;

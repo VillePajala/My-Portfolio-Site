@@ -1,7 +1,7 @@
 
 
 $(document).ready(function(){
-
+var name = "";
     // Clicking the first element will..
     $("#start_button").click(function(){
       // manipulate element's css styles
@@ -16,21 +16,38 @@ $(document).ready(function(){
 
     // function to create a collection of html elements
     function nextBox() {
-      var txt1 = $("<div class='container' id='next_button'>");
-      var txt2 = $("<label for='usr'>Name:</label>");
-      var txt3 = $("<input type='text' class='form-control' id='usr'>");
-      $("body").append(txt1).fadeIn("slow");
-      $("#next_button").append(txt2).fadeIn("slow");
-      $("#next_button").append(txt3).fadeIn("slow");
+      var box = $("<div class='container' id='next_button'>");
+      var txt1 = $("<label for='usr'>Name:</label>");
+      var input = $("<input type='text' class='form-control' id='usr'>");
+      $("body").append(box).fadeIn("slow");
+      $("#next_button").append(txt1).fadeIn("slow");
+      $("#next_button").append(input).fadeIn("slow");
 
     } // nextBox
 
     // When pressed the enter key on dynamically created input field
     $("body").on("keyup", "#usr", function(e) {
-    if (e.which == 13) {
-        alert("Enter");
+      if (e.which == 13) {
+        // Input value is saved
+        var name = $("#usr").val();
+        // the div element is faded out
+        $("#next_button").fadeOut("slow");
+        // Running a function after delay and passing the input value as a parameter
+        setTimeout(function(){
+          greeting(name);
+        }, 1000);
+
+      }
+    });
+
+    // Function to create a htmls element to greet the visitor
+    function greeting(name) {
+      var box = $("<div class='container' id='greetings'>");
+      // Greet the visitor
+      var txt1 = $("<h3>Hello, " + name + " !</h3>");
+      $("body").append(box).fadeIn("slow");
+      $("#greetings").append(txt1).fadeIn("slow");
     }
-});
 
 }); // Main
 
