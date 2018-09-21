@@ -2,10 +2,10 @@
 body {
   max-width: 960px;
   margin: auto;
+  font-family: 'Cinzel', serif;
 }
 
 #start_button {
-  font-family: fantasy;
   margin: auto;
   margin-top: 300px;
   width: 100px;
@@ -19,7 +19,6 @@ body {
 }
 
 #next_button {
-  font-family: fantasy;
   margin: auto;
   margin-top: 300px;
   width: 100px;
@@ -36,15 +35,17 @@ body {
   border-radius: 0px;
   border-color: silver;
   text-align: center;
+  border: none;
 }
 
 #greetings {
-  font-family: fantasy;
   margin: auto;
   margin-top: 200px;
-  width: 100px;
+  width: 50%;
   text-align: center;
-  padding: 3px;
+  padding: 5px;
+  padding-top: 2px;
+  font-size: 50px;
   color: silver;
   animation: button_in 2s;
   animation-fill-mode: forwards;
@@ -52,10 +53,26 @@ body {
 
 }
 
+#question {
+  margin: auto;
+  margin-top: 20px;
+  width: 400px;
+  text-align: center;
+  padding: 3px;
+  padding-top: 2px;
+  font-size: 50px;
+  color: silver;
+  animation: button_in 2s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+
+
+}
+
 
 .form-control:focus {
   box-shadow: 0 2px 10px silver inset;
-  border-color: silver;
+  border: none;
   text-align: center;
 }
 

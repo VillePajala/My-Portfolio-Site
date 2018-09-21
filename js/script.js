@@ -44,9 +44,31 @@ var name = "";
     function greeting(name) {
       var box = $("<div class='container' id='greetings'>");
       // Greet the visitor
-      var txt1 = $("<h3>Hello, " + name + " !</h3>");
+      var txt1 = $("<h1>Hello, " + name + " !</h1>");
       $("body").append(box).fadeIn("slow");
       $("#greetings").append(txt1).fadeIn("slow");
+
+      setTimeout(function(){
+        var box2 = $("<div class='container' id='question'>");
+        // Greet the visitor
+        var txt2 = $("<h1>What would you like to see?</h1>");
+        $("body").append(box2).fadeIn("slow");
+        $("#question").append(txt2).fadeIn("slow");
+
+      }, 2000);
+
+      setTimeout(function(){
+        $("#greetings").fadeOut("slow");
+      }, 4000);
+
+      setTimeout(function(){
+        $("#question").css("margin-top", "281px");
+        $("#question").animate({"margin-top" : "-=200px"}, 1500, "swing");
+      }, 4600);
+
+      setTimeout(function(){
+
+      }, 4700);
     }
 
 }); // Main
