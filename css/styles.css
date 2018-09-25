@@ -142,7 +142,14 @@ h1 {
 
   #greetings, #question, #art, #music, #games, #design, #info {
     max-width: 350px;
+    height: 50px;
+    padding-top: 7px;
   }
+
+  #greetings {
+    margin-top: 210px;
+  }
+
   h3 {
     font-size: 10px;
   }
