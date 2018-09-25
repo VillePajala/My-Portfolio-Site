@@ -98,6 +98,93 @@ var name = "";
       $("#info").append(txt5).fadeIn("slow");
     }
 
+    // if the "art" -element is clicked
+    $("body").on("click", "#art", function(){
+      // fadeout all unused menu items
+      $("#music").fadeOut("slow");
+      $("#games").fadeOut("slow");
+      $("#design").fadeOut("slow");
+      $("#info").fadeOut("slow");
+    }); // on(click) #art
+
+    // if the "music" -element is clicked
+    $("body").on("click", "#music", function(){
+      // fadeout all unused menu items
+      $("#art").fadeOut("slow");
+      $("#games").fadeOut("slow");
+      $("#design").fadeOut("slow");
+      $("#info").fadeOut("slow");
+
+      setTimeout(function(){
+        $("#music").css("margin-top", "107px");
+        $("#music").animate({"margin-top" : "-=100px"}, 1500, "swing");
+      }, 600); // setTimeout
+    }); // on(click) #music
+
+    // if the "games" -element is clicked
+    $("body").on("click", "#games", function(){
+      // fadeout all unused menu items
+      $("#art").fadeOut("slow");
+      $("#music").fadeOut("slow");
+      $("#design").fadeOut("slow");
+      $("#info").fadeOut("slow");
+
+      setTimeout(function(){
+        $("#games").css("margin-top", "187px");
+        $("#games").animate({"margin-top" : "-=180px"}, 1500, "swing");
+      }, 600); // setTimeout
+    }); // on(click) #games
+
+    // if the "design" -element is clicked
+    $("body").on("click", "#design", function(){
+      // fadeout all unused menu items
+      $("#art").fadeOut("slow");
+      $("#music").fadeOut("slow");
+      $("#games").fadeOut("slow");
+      $("#info").fadeOut("slow");
+
+      setTimeout(function(){
+        $("#design").css("margin-top", "267px");
+        $("#design").animate({"margin-top" : "-=260px"}, 1500, "swing");
+      }, 600); // setTimeout
+    }); // on(click) #design
+
+    // if the "info" -element is clicked
+    $("body").on("click", "#info", function(){
+      // fadeout all unused menu items
+      $("#art").fadeOut("slow");
+      $("#music").fadeOut("slow");
+      $("#games").fadeOut("slow");
+      $("#design").fadeOut("slow");
+
+      setTimeout(function(){
+        $("#info").css("margin-top", "347px");
+        $("#info").animate({"margin-top" : "-=340px"}, 1500, "swing");
+      }, 600); // setTimeout
+    }); // on(click) #info
+
+    // if "question" is clicked
+    $("body").on("click", "#question", function(){
+      // fadeout all menu items
+      $("#art").fadeOut("slow");
+      $("#music").fadeOut("slow");
+      $("#games").fadeOut("slow");
+      $("#design").fadeOut("slow");
+      $("#info").fadeOut("slow");
+
+      // After a delay
+      setTimeout(function(){
+        // remove all menu itmes complitely
+        $("#art").remove();
+        $("#music").remove();
+        $("#games").remove();
+        $("#design").remove();
+        $("#info").remove();
+        // Run function to create menu items again
+        showCategories();
+      }, 1000); // setTimeout
+
+    }); // on(click) #question
 }); // Main
 
 // Clicking an dynamically created element
