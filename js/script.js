@@ -227,6 +227,13 @@ var name = "";
     } // showGames()
 
     function showDesign() {
+      var box = $("<div class='container' id='layout'>");
+      var img = $("<img class='img-fluid' src='images/lay_out_ex_1.jpg'></img>)");
+      var txt = $("<h6>Saisinko Lisää, 2017</h6>");
+
+      $("body").append(box).fadeIn("slow");
+      $("#layout").append(img).fadeIn("slow");
+      $("#layout").append(txt).fadeIn("slow");
 
     } // showDesign()
 
