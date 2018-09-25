@@ -17,7 +17,7 @@ var name = "";
     // function to create a collection of html elements
     function nextBox() {
       var box = $("<div class='container' id='next_button'>");
-      var txt1 = $("<label for='usr'>Name:</label>");
+      var txt1 = $("<label for='usr'>What is your name?</label>");
       var input = $("<input type='text' class='form-control' id='usr' autofocus>");
       $("body").append(box).fadeIn("slow");
       $("#next_button").append(txt1).fadeIn("slow");
@@ -43,7 +43,7 @@ var name = "";
     function greeting(name) {
       var box = $("<div class='container' id='greetings'>");
       // Greet the visitor
-      var txt1 = $("<h1>Hello, " + name + " !</h1>");
+      var txt1 = $("<h1>Nice to meet you, " + name + "!</h1>");
       $("body").append(box).fadeIn("slow");
       $("#greetings").append(txt1).fadeIn("slow");
 
@@ -105,6 +105,10 @@ var name = "";
       $("#games").fadeOut("slow");
       $("#design").fadeOut("slow");
       $("#info").fadeOut("slow");
+      // run function to show realted content
+      setTimeout(function(){
+        showArt();
+      }, 600); // setTimeout
     }); // on(click) #art
 
     // if the "music" -element is clicked
@@ -115,10 +119,16 @@ var name = "";
       $("#design").fadeOut("slow");
       $("#info").fadeOut("slow");
 
+      // Animate the chosen menu item
       setTimeout(function(){
         $("#music").css("margin-top", "107px");
         $("#music").animate({"margin-top" : "-=100px"}, 1500, "swing");
       }, 600); // setTimeout
+
+      // run function to show realted content
+      setTimeout(function(){
+        showMusic();
+      }, 2100); // setTimeout
     }); // on(click) #music
 
     // if the "games" -element is clicked
@@ -129,10 +139,16 @@ var name = "";
       $("#design").fadeOut("slow");
       $("#info").fadeOut("slow");
 
+      // Animate the chosen menu item
       setTimeout(function(){
         $("#games").css("margin-top", "187px");
         $("#games").animate({"margin-top" : "-=180px"}, 1500, "swing");
       }, 600); // setTimeout
+
+      // run function to show realted content
+      setTimeout(function(){
+        showGames();
+      }, 2100); // setTimeout
     }); // on(click) #games
 
     // if the "design" -element is clicked
@@ -143,10 +159,17 @@ var name = "";
       $("#games").fadeOut("slow");
       $("#info").fadeOut("slow");
 
+      // Animate the chosen menu item
       setTimeout(function(){
         $("#design").css("margin-top", "267px");
         $("#design").animate({"margin-top" : "-=260px"}, 1500, "swing");
       }, 600); // setTimeout
+
+      // run function to show realted content
+      setTimeout(function(){
+        showDesign();
+      }, 2100); // setTimeout
+
     }); // on(click) #design
 
     // if the "info" -element is clicked
@@ -157,10 +180,16 @@ var name = "";
       $("#games").fadeOut("slow");
       $("#design").fadeOut("slow");
 
+      // Animate the chosen menu item
       setTimeout(function(){
         $("#info").css("margin-top", "347px");
         $("#info").animate({"margin-top" : "-=340px"}, 1500, "swing");
       }, 600); // setTimeout
+
+      // run function to show realted content
+      setTimeout(function(){
+        showInfo();
+      }, 2100); // setTimeout
     }); // on(click) #info
 
     // if "question" is clicked
@@ -183,6 +212,29 @@ var name = "";
         // Run function to create menu items again
         showCategories();
       }, 1000); // setTimeout
-
     }); // on(click) #question
+
+    function showArt() {
+
+    } // showArt()
+
+    function showMusic() {
+
+    } // showMusic()
+
+    function showGames() {
+
+    } // showGames()
+
+    function showDesign() {
+
+    } // showDesign()
+
+    function showInfo() {
+
+    } // showInfo()
+
+
+
+
 }); // Main
