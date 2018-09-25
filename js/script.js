@@ -64,7 +64,7 @@ var name = "";
       // Animate the question to move to the top pf the screen
       setTimeout(function(){
         $("#question").css("margin-top", "281px");
-        $("#question").animate({"margin-top" : "-=200px"}, 1500, "swing");
+        $("#question").animate({"margin-top" : "-=240px"}, 1500, "swing");
       }, 4600); // setTimeout
 
       // After delay, the next function is called
