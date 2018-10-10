@@ -41,7 +41,7 @@ body {
 #greetings {
   margin: auto;
   margin-top: 200px;
-  width: 400px;
+  width: 500px;
   text-align: center;
   padding: 5px;
   padding-top: 2px;
@@ -56,7 +56,7 @@ body {
 #question {
   margin: auto;
   margin-top: 20px;
-  width: 400px;
+  width: 500px;
   text-align: center;
   padding: 3px;
   padding-top: 2px;
@@ -68,10 +68,10 @@ body {
 }
 
 
-#art, #music, #games, #design, #info, #layout {
+#art, #music, #games, #design, #info, #layout, #song {
   margin: auto;
   margin-top: 30px;
-  width: 400px;
+  width: 500px;
   text-align: center;
   padding: 3px;
   padding-top: 2px;

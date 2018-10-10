@@ -43,7 +43,7 @@ var name = "";
     function greeting(name) {
       var box = $("<div class='container' id='greetings'>");
       // Greet the visitor
-      var txt1 = $("<h1>Nice to meet you, " + name + "!</h1>");
+      var txt1 = $("<h1>Nice to meet you, <br>" + name + "!</h1>");
       $("body").append(box).fadeIn("slow");
       $("#greetings").append(txt1).fadeIn("slow");
 
@@ -105,10 +105,18 @@ var name = "";
       $("#games").fadeOut("slow");
       $("#design").fadeOut("slow");
       $("#info").fadeOut("slow");
+
+      // Animate the chosen menu item
+      setTimeout(function(){
+        $("#art").css("margin-top", "27px");
+        $("#art").animate({"margin-top" : "-=20px"}, 1500, "swing");
+        $("#art").animate({"width" : "+=300"}, 1500, "swing");
+      }, 600); // setTimeout
+
       // run function to show realted content
       setTimeout(function(){
         showArt();
-      }, 600); // setTimeout
+      }, 2100); // setTimeout
     }); // on(click) #art
 
     // if the "music" -element is clicked
@@ -123,6 +131,7 @@ var name = "";
       setTimeout(function(){
         $("#music").css("margin-top", "107px");
         $("#music").animate({"margin-top" : "-=100px"}, 1500, "swing");
+        $("#music").animate({"width" : "+=300"}, 1500, "swing");
       }, 600); // setTimeout
 
       // run function to show realted content
@@ -143,6 +152,7 @@ var name = "";
       setTimeout(function(){
         $("#games").css("margin-top", "187px");
         $("#games").animate({"margin-top" : "-=180px"}, 1500, "swing");
+        $("#games").animate({"width" : "+=300"}, 1500, "swing");
       }, 600); // setTimeout
 
       // run function to show realted content
@@ -163,6 +173,7 @@ var name = "";
       setTimeout(function(){
         $("#design").css("margin-top", "267px");
         $("#design").animate({"margin-top" : "-=260px"}, 1500, "swing");
+        $("#design").animate({"width" : "+=300"}, 1500, "swing");
       }, 600); // setTimeout
 
       // run function to show realted content
@@ -184,6 +195,7 @@ var name = "";
       setTimeout(function(){
         $("#info").css("margin-top", "347px");
         $("#info").animate({"margin-top" : "-=340px"}, 1500, "swing");
+        $("#info").animate({"width" : "+=300"}, 1500, "swing");
       }, 600); // setTimeout
 
       // run function to show realted content
@@ -200,6 +212,7 @@ var name = "";
       $("#games").fadeOut("slow");
       $("#design").fadeOut("slow");
       $("#info").fadeOut("slow");
+      $("#layout").fadeOut("slow");
 
       // After a delay
       setTimeout(function(){
@@ -209,6 +222,7 @@ var name = "";
         $("#games").remove();
         $("#design").remove();
         $("#info").remove();
+        $("#layout").remove();
         // Run function to create menu items again
         showCategories();
       }, 1000); // setTimeout
@@ -220,6 +234,13 @@ var name = "";
 
     function showMusic() {
 
+      var box = $("<div class='container' id='song'>");
+      var file_src = "https://youtu.be/Vpbx69_Rjm0";
+
+      $("body").append(box).fadeIn("slow");
+      var iframe = $("<iframe>").attr("src", file_src).appendTo("#song");
+      $("#song").animate({"width" : "+=300"}, 1500, "swing");
+
     } // showMusic()
 
     function showGames() {
@@ -229,11 +250,23 @@ var name = "";
     function showDesign() {
       var box = $("<div class='container' id='layout'>");
       var img = $("<img class='img-fluid' src='images/lay_out_ex_1.jpg'></img>)");
+      var img2 = $("<img class='img-fluid' src='images/lay_out_ex_2.jpg'></img>)");
       var txt = $("<h6>Saisinko Lisää, 2017</h6>");
+
 
       $("body").append(box).fadeIn("slow");
       $("#layout").append(img).fadeIn("slow");
       $("#layout").append(txt).fadeIn("slow");
+      $("#layout").animate({"width" : "+=300"}, 1500, "swing");
+
+      $("body").on("click", "#layout", function(){
+        // fadeout all menu items
+
+          $("img").remove();
+          $("#layout").append(img2).fadeIn("slow");
+
+      }); // on(click) #question
+
 
     } // showDesign()
 
